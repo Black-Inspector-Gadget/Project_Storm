@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, MessageCircleHeart, ShieldCheck, FileText, HeartHandshake } from 'lucide-react';
+import { ArrowLeft, MessageCircleHeart, ShieldCheck, FileText, HeartHandshake, Calendar, Pill, Car, Home, ExternalLink } from 'lucide-react';
 
 const HowToHelp = () => {
   return (
@@ -42,6 +42,53 @@ const HowToHelp = () => {
           <li><strong style={{ color: 'var(--text-primary)' }}>Stay with them</strong> until they are fully recovered and alert.</li>
           <li><strong style={{ color: 'var(--text-primary)' }}>Advocate on their behalf</strong> until they are baseline.</li>
         </ul>
+      </div>
+
+      <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Easing the Burden</h2>
+      <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem' }}>
+        You can significantly ease the burden on your loved one by helping with logistical and organizational tasks such as:
+      </p>
+
+      <div style={{ display: 'grid', gap: '1.5rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Calendar size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Help with appointments</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Offer to go with your friend to doctor's appointments, especially early on, to help take notes and remember important information. Be a Second Set of Ears, ensure no crucial information is forgotten.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Pill size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Medication reminders</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Offer to help with medication management. Reminders, documenting side effects, and similar.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Car size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Transportation</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Offer rides to appointments or social events. Assist with learning and getting accommodations for public transit.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Home size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Home adaptations</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>If necessary, help them make their home safer by removing hazards or making adjustments to their living space.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <ExternalLink size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Connect them with resources</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Educating yourself can be overwhelming, if you find a great resource, share it! Forums, websites, articles, groups, etc.</span>
+          </div>
+        </div>
       </div>
 
       <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', padding: '2rem', borderRadius: '12px', textAlign: 'center' }}>
