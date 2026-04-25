@@ -135,14 +135,7 @@ const GettingStarted = () => {
               <Link to="/getting-started/support-first-aid" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Learn First Aid</Link>
             </div>
 
-            <div className="card">
-              <Users size={28} color="var(--accent-primary)" style={{ marginBottom: '1rem' }} />
-              <h3>Caregiver Support</h3>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                You cannot pour from an empty cup. Find resources for caregiver burnout, support groups for families, and strategies for maintaining your own mental health.
-              </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Find Support</button>
-            </div>
+
 
           </div>
         </div>
