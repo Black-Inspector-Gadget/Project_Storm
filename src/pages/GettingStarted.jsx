@@ -96,7 +96,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Navigate social situations, advocate for your rights in the workplace, and learn how to talk openly about your diagnosis with confidence.
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Read More</button>
+              <Link to="/getting-started/challenge-the-stigma" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Read More</Link>
             </div>
 
           </div>

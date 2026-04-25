@@ -6,6 +6,7 @@ import GettingStarted from './pages/GettingStarted';
 import EducateYourself from './pages/EducateYourself';
 import SeizureActionPlans from './pages/SeizureActionPlans';
 import SeizureJournals from './pages/SeizureJournals';
+import ChallengeStigma from './pages/ChallengeStigma';
 
 const Placeholder = ({ title }) => (
   <div className="container" style={{ padding: '4rem 0' }}>
@@ -26,6 +27,7 @@ function App() {
           <Route path="getting-started/educate-yourself" element={<EducateYourself />} />
           <Route path="getting-started/seizure-action-plans" element={<SeizureActionPlans />} />
           <Route path="getting-started/seizure-journals" element={<SeizureJournals />} />
+          <Route path="getting-started/challenge-the-stigma" element={<ChallengeStigma />} />
           <Route path="support" element={<Placeholder title="Support" />} />
           <Route path="classification" element={<Placeholder title="Classification" />} />
           <Route path="resources" element={<Placeholder title="Resources" />} />
