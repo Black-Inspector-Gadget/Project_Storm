@@ -114,7 +114,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Epilepsy looks different for everyone. Learn about the mechanics of seizures, common side effects of medication, and the emotional toll of the diagnosis.
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Read More</button>
+              <Link to="/getting-started/understanding-diagnosis" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Read More</Link>
             </div>
 
             <div className="card">
