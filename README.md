@@ -4,7 +4,8 @@ A comprehensive medical-grade support platform migrated from Google Sites into a
 
 ## Live Demo
 
-[View the Live Platform](https://Black-Inspector-Gadget.github.io/Project_Storm/)
+- [View the Live Platform](https://Black-Inspector-Gadget.github.io/Project_Storm/)
+- [Interact with the AI Chat (NotebookLM)](https://notebooklm.google.com/notebook/c854ac82-267d-41a9-ba07-1796598deabc)
 
 ## Tech Stack & Tools
 
