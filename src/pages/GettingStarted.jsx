@@ -132,7 +132,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Learn the critical steps to keep them safe during a seizure. Know when to observe, when to intervene, and exactly when to call 911.
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Learn First Aid</button>
+              <Link to="/getting-started/support-first-aid" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Learn First Aid</Link>
             </div>
 
             <div className="card">
