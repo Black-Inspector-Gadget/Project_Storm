@@ -36,7 +36,6 @@ function App() {
           <Route path="getting-started/how-to-help" element={<HowToHelp />} />
           <Route path="getting-started/support-first-aid" element={<SupportFirstAid />} />
           <Route path="classification" element={<Classification />} />
-          <Route path="resources" element={<Placeholder title="Resources" />} />
         </Route>
       </Routes>
     </HashRouter>
