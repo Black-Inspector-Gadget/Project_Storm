@@ -9,7 +9,6 @@ const Navbar = () => {
   const links = [
     { name: 'Home', path: '/' },
     { name: 'Getting Started', path: '/getting-started' },
-    { name: 'Support', path: '/support' },
     { name: 'Classification', path: '/classification' },
     { name: 'Resources', path: '/resources' }
   ];

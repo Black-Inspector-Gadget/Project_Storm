@@ -34,7 +34,6 @@ function App() {
           <Route path="getting-started/understanding-diagnosis" element={<UnderstandingDiagnosis />} />
           <Route path="getting-started/how-to-help" element={<HowToHelp />} />
           <Route path="getting-started/support-first-aid" element={<SupportFirstAid />} />
-          <Route path="support" element={<Placeholder title="Support" />} />
           <Route path="classification" element={<Placeholder title="Classification" />} />
           <Route path="resources" element={<Placeholder title="Resources" />} />
         </Route>

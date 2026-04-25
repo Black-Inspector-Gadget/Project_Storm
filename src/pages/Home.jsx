@@ -85,13 +85,7 @@ const Home = () => {
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6 }}>Understand different symptoms, seizure types, and specific epilepsy syndromes.</p>
           </Link>
 
-          <Link to="/support" className="card" style={{ display: 'block', textDecoration: 'none', background: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255, 255, 255, 0.5)' }}>
-            <div style={{ width: '60px', height: '60px', borderRadius: '16px', background: 'var(--accent-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-              <Users size={32} color="var(--accent-primary)" />
-            </div>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>Find Community</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6 }}>Connect with support groups, events, and a network of people who understand.</p>
-          </Link>
+
           
         </div>
       </section>
