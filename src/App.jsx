@@ -4,6 +4,7 @@ import Home from './pages/Home';
 
 import GettingStarted from './pages/GettingStarted';
 import EducateYourself from './pages/EducateYourself';
+import SeizureActionPlans from './pages/SeizureActionPlans';
 
 const Placeholder = ({ title }) => (
   <div className="container" style={{ padding: '4rem 0' }}>
@@ -22,6 +23,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="getting-started" element={<GettingStarted />} />
           <Route path="getting-started/educate-yourself" element={<EducateYourself />} />
+          <Route path="getting-started/seizure-action-plans" element={<SeizureActionPlans />} />
           <Route path="support" element={<Placeholder title="Support" />} />
           <Route path="classification" element={<Placeholder title="Classification" />} />
           <Route path="resources" element={<Placeholder title="Resources" />} />

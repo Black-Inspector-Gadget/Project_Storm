@@ -78,7 +78,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Create a customized, printable document that tells others exactly what to do (and who to call) if you have a seizure in public or at work.
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Create Plan</button>
+              <Link to="/getting-started/seizure-action-plans" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Create Plan</Link>
             </div>
 
             <div className="card">
