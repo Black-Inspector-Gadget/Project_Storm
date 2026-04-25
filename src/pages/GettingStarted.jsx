@@ -68,7 +68,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Knowledge is power. Learn about your specific seizure type, identify your personal triggers, and understand how your prescribed medications work. 
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Read More</button>
+              <Link to="/getting-started/educate-yourself" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Read More</Link>
             </div>
 
             <div className="card">

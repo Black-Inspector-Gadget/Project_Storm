@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 
 import GettingStarted from './pages/GettingStarted';
+import EducateYourself from './pages/EducateYourself';
 
 const Placeholder = ({ title }) => (
   <div className="container" style={{ padding: '4rem 0' }}>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="getting-started" element={<GettingStarted />} />
+          <Route path="getting-started/educate-yourself" element={<EducateYourself />} />
           <Route path="support" element={<Placeholder title="Support" />} />
           <Route path="classification" element={<Placeholder title="Classification" />} />
           <Route path="resources" element={<Placeholder title="Resources" />} />
