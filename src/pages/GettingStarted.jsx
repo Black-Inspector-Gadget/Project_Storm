@@ -87,7 +87,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Track your seizures, auras, and daily habits. Identifying patterns is one of the most effective ways to communicate with your neurologist.
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Download Template</button>
+              <Link to="/getting-started/seizure-journals" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Download Template</Link>
             </div>
 
             <div className="card">
