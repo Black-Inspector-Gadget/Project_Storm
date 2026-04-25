@@ -8,6 +8,7 @@ import SeizureActionPlans from './pages/SeizureActionPlans';
 import SeizureJournals from './pages/SeizureJournals';
 import ChallengeStigma from './pages/ChallengeStigma';
 import UnderstandingDiagnosis from './pages/UnderstandingDiagnosis';
+import HowToHelp from './pages/HowToHelp';
 
 const Placeholder = ({ title }) => (
   <div className="container" style={{ padding: '4rem 0' }}>
@@ -30,6 +31,7 @@ function App() {
           <Route path="getting-started/seizure-journals" element={<SeizureJournals />} />
           <Route path="getting-started/challenge-the-stigma" element={<ChallengeStigma />} />
           <Route path="getting-started/understanding-diagnosis" element={<UnderstandingDiagnosis />} />
+          <Route path="getting-started/how-to-help" element={<HowToHelp />} />
           <Route path="support" element={<Placeholder title="Support" />} />
           <Route path="classification" element={<Placeholder title="Classification" />} />
           <Route path="resources" element={<Placeholder title="Resources" />} />

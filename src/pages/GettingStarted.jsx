@@ -123,7 +123,7 @@ const GettingStarted = () => {
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Discover actionable ways to support them, such as offering rides, attending neurology appointments to take notes, or helping organize pill boxes.
               </p>
-              <button className="btn btn-outline" style={{ width: '100%' }}>Read More</button>
+              <Link to="/getting-started/how-to-help" className="btn btn-outline" style={{ display: 'flex', width: '100%' }}>Read More</Link>
             </div>
 
             <div className="card">
