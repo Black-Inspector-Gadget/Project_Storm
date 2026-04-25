@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Stethoscope, Users, FileText, Clock, AlertTriangle, Activity } from 'lucide-react';
+import { ArrowLeft, Stethoscope, Users, FileText, Clock, AlertTriangle, Activity, ShieldAlert } from 'lucide-react';
 
 const EducateYourself = () => {
   return (
