@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, MessageCircleHeart, ShieldCheck, FileText, HeartHandshake, Calendar, Pill, Car, Home, ExternalLink } from 'lucide-react';
+import { ArrowLeft, MessageCircleHeart, ShieldCheck, FileText, HeartHandshake, Calendar, Pill, Car, Home, ExternalLink, Ear, ThumbsUp, Hourglass, Unlock, Users } from 'lucide-react';
 
 const HowToHelp = () => {
   return (
@@ -87,6 +87,53 @@ const HowToHelp = () => {
           <div>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Connect them with resources</strong>
             <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Educating yourself can be overwhelming, if you find a great resource, share it! Forums, websites, articles, groups, etc.</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Emotional Support & Independence</h2>
+      <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem' }}>
+        Support isn't just about logistics. How you emotionally show up for your loved one is just as important.
+      </p>
+
+      <div style={{ display: 'grid', gap: '1.5rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Ear size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Be a Safe Listener</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Create a safe space where your friend can openly discuss their feelings and concerns about their condition without fear of judgment.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <ThumbsUp size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Encourage and Validate</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Offer regular encouragement, reminding your friend that you believe in them and that they absolutely can live a full and meaningful life with Epilepsy.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Hourglass size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Practice Patience</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Understand that Epilepsy is unpredictable and seizures can disrupt plans. Be patient and flexible when sudden changes or cancellations are necessary.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Unlock size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Avoid Overprotection</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>While support is crucial, be careful not to be overly controlling or protective. Respect their need for independence and autonomy.</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-primary)' }}>
+          <Users size={24} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem', color: 'var(--text-primary)' }}>Facilitate Connection</strong>
+            <span style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>Encourage your friend to connect with others who understand by joining local, online, or social media epilepsy support groups.</span>
           </div>
         </div>
       </div>
