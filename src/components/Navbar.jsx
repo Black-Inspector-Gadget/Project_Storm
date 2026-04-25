@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,8 @@ const Navbar = () => {
   const links = [
     { name: 'Home', path: '/' },
     { name: 'Getting Started', path: '/getting-started' },
-    { name: 'Classification', path: '/classification' }
+    { name: 'Classification', path: '/classification' },
+    { name: 'AI Chat', path: 'https://notebooklm.google.com/notebook/c854ac82-267d-41a9-ba07-1796598deabc', isExternal: true }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -29,18 +30,40 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="desktop-nav" style={{ display: 'flex', gap: '2rem' }}>
+        <div className="desktop-nav" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
           {links.map(link => (
-            <Link 
-              key={link.path} 
-              to={link.path}
-              style={{ 
-                fontWeight: 600, 
-                color: isActive(link.path) ? 'var(--accent-primary)' : 'var(--text-secondary)'
-              }}
-            >
-              {link.name}
-            </Link>
+            link.isExternal ? (
+              <a 
+                key={link.path} 
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  fontWeight: 600, 
+                  color: 'var(--text-primary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.3rem',
+                  padding: '0.5rem 1rem',
+                  background: 'var(--accent-light)',
+                  borderRadius: '50px',
+                  border: '1px solid var(--accent-primary)'
+                }}
+              >
+                {link.name} <ExternalLink size={14} />
+              </a>
+            ) : (
+              <Link 
+                key={link.path} 
+                to={link.path}
+                style={{ 
+                  fontWeight: 600, 
+                  color: isActive(link.path) ? 'var(--accent-primary)' : 'var(--text-secondary)'
+                }}
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
 
@@ -62,17 +85,36 @@ const Navbar = () => {
           padding: '1rem 2rem', display: 'flex', flexDirection: 'column', gap: '1rem'
         }}>
           {links.map(link => (
-            <Link 
-              key={link.path} 
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              style={{ 
-                fontWeight: 600, fontSize: '1.2rem',
-                color: isActive(link.path) ? 'var(--accent-primary)' : 'var(--text-secondary)'
-              }}
-            >
-              {link.name}
-            </Link>
+            link.isExternal ? (
+              <a 
+                key={link.path} 
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                style={{ 
+                  fontWeight: 600, fontSize: '1.2rem',
+                  color: 'var(--accent-primary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}
+              >
+                {link.name} <ExternalLink size={16} />
+              </a>
+            ) : (
+              <Link 
+                key={link.path} 
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                style={{ 
+                  fontWeight: 600, fontSize: '1.2rem',
+                  color: isActive(link.path) ? 'var(--accent-primary)' : 'var(--text-secondary)'
+                }}
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
       )}
