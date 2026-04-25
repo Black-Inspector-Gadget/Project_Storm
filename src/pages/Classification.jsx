@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Brain, Activity, HelpCircle, AlertCircle, Search, Book, Clock } from 'lucide-react';
+import { Brain, Activity, HelpCircle, AlertCircle, Search, Book, Clock, Stethoscope } from 'lucide-react';
 
 const seizureTypes = [
   { name: 'Absence', description: 'An absence seizure causes a short period of "blanking out" or staring into space. Like other kinds of seizures, they are caused by brief abnormal electrical activity in a person’s brain.' },
@@ -61,9 +61,32 @@ const epilepsySyndromes = [
   { name: 'Unverricht-Lundborg Disease', description: "This type of PME is also called Baltic myoclonus and epilepsy, progressive myoclonus 1, and EPM1. This is the most common form of PME worldwide. It is caused by a mutation within a protein that is important for the proper function of the lysosome (the part of a cell that breaks down waste). There are over 14 different known genetic mutations. A distinguishing feature (in addition to those above) is dysarthria (trouble with speaking clearly), dysphagia (difficulty swallowing/eating), and tremor. An earlier onset of symptoms predicts a more severe course. Although life expectancy is shortened, it is extremely variable. In the past, life expectancy was 8 - 15 years after symptoms began. Yet with newer supportive treatments, some people with milder forms of EMP1 can live into their 70s.", ageRange: '6 - 16' }
 ];
 
+const symptomsData = [
+  { name: 'Aura', description: "A subjective, warning sensation that some individuals experience right before a seizure. It's essentially a focal seizure with preserved awareness, also known as a focal aware seizure. Auras can manifest in various ways, including visual, auditory, olfactory, gustatory, or somatosensory disturbances, as well as emotional or cognitive changes.", scientificName: 'Focal Seizure' },
+  { name: 'Automatisms', description: "Refers to involuntary, repetitive behaviors that occur during or after a seizure, often with impaired awareness. These behaviors can range from simple actions like lip smacking or fumbling with clothes to more complex activities like hair pulling, wandering or repeating phrases. Automatisms are commonly associated with temporal lobe epilepsy and can be a key indicator of seizure activity.", scientificName: 'Automatisms' },
+  { name: 'Blanked Out', description: "Individuals may momentarily lose awareness, stare blankly, or become unresponsive to stimuli.", scientificName: 'Loss of Consciousness or Awareness' },
+  { name: 'Chewing', description: "Individual may gnaw at (something) persistently unknownly.", scientificName: 'Automatisms' },
+  { name: 'Confusion or Disorientation', description: "Confusion and disorientation are distinct but often related symptoms. Confusion refers to difficulty understanding surroundings, making decisions, or recognizing people, while disorientation specifically involves a loss of awareness of time, place, or person. Both can be caused by a variety of factors and can be distressing for the individual experiencing them.", scientificName: 'Confusion or Disorientation' },
+  { name: 'Convulsions', description: "These can involve rhythmic jerking, stiffening, or twitching of limbs and the body.", scientificName: 'Seizure' },
+  { name: 'Daydreaming or Staring Spells', description: "A sudden cessation of activity, often accompanied by blinking or a vacant expression.", scientificName: 'Loss of Consciousness or Awareness' },
+  { name: 'Feeling', description: "Examples include déjà vu, fear, panic, or a sudden feeling of joy.", scientificName: 'Emotional Aura' },
+  { name: 'Fidgeting', description: "Fidgeting is the act of engaging in small, repetitive movements, often unconsciously, such as tapping a foot, drumming fingers, or twirling hair", scientificName: 'Automatisms' },
+  { name: 'Headache', description: "A headache is a pain or discomfort in the head or face. Headaches can vary in severity, location, and type, with the most common being tension headaches, migraines, and cluster headaches", scientificName: 'Cephalalgia' },
+  { name: 'Lip-smacking', description: "Lip smacking is the rapid opening and closing of the mouth, sometimes accompanied by a clicking sound.", scientificName: 'Automatisms' },
+  { name: 'Mental', description: "Fogginess, extreme fatigue, sudden sleepiness, or temporary memory loss.", scientificName: 'Cognitive Aura' },
+  { name: 'Nausea', description: "Nausea is a feeling of sickness with an inclination to vomit.", scientificName: 'Nausea' },
+  { name: 'Sight', description: "Seeing flashing lights, bright colors, dark colors, geometric patterns, or tunnel vision.", scientificName: 'Visual Aura' },
+  { name: 'Smell', description: "Smelling strange, unpleasant or unusual smells.", scientificName: 'Olfactory Aura' },
+  { name: 'Sound', description: "Hearing sounds like ringing, buzzing, or even music.", scientificName: 'Auditory Aura' },
+  { name: 'Taste', description: "Taste, such as a metallic or bitter taste.", scientificName: 'Gustatory Aura' },
+  { name: 'Tongue Bite', description: "Tongue biting can be a sign of a seizure, particularly generalized tonic-clonic seizures, but it can also occur during syncope (fainting). In seizures, tongue biting is often on the side of the tongue.", scientificName: 'Tongue Bite' },
+  { name: 'Touch', description: "These can involve tingling, numbness, perceived changes in temperature, or a sensation of movement on the skin.", scientificName: 'Somatosensory Auras' },
+  { name: 'Vomiting', description: "The forceful expulsion of stomach contents through the mouth.", scientificName: 'Emesis' }
+];
+
 const Classification = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeTab, setActiveTab] = useState('types'); // 'types' or 'syndromes'
+  const [activeTab, setActiveTab] = useState('types'); // 'types', 'syndromes', or 'symptoms'
 
   const filteredTypes = seizureTypes.filter(type => 
     type.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -73,6 +96,12 @@ const Classification = () => {
   const filteredSyndromes = epilepsySyndromes.filter(syndrome => 
     syndrome.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
     syndrome.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const filteredSymptoms = symptomsData.filter(symptom => 
+    symptom.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    symptom.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    symptom.scientificName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -222,12 +251,12 @@ const Classification = () => {
             <Book size={36} color="var(--accent-primary)" /> Medical Directory
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
-            Browse through detailed descriptions of specific seizure types and epilepsy syndromes. You can use the tabs to switch directories, and the search box to filter.
+            Browse through detailed descriptions of specific seizure types, epilepsy syndromes, and common symptoms.
           </p>
         </div>
 
         {/* Tabs */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
           <button 
             onClick={() => setActiveTab('types')}
             style={{ 
@@ -258,6 +287,21 @@ const Classification = () => {
             }}>
             Epilepsy Syndromes
           </button>
+          <button 
+            onClick={() => setActiveTab('symptoms')}
+            style={{ 
+              padding: '0.75rem 2rem', 
+              fontSize: '1.1rem', 
+              fontWeight: 600, 
+              borderRadius: '50px', 
+              border: activeTab === 'symptoms' ? '2px solid var(--accent-primary)' : '2px solid transparent',
+              background: activeTab === 'symptoms' ? 'var(--accent-light)' : 'var(--bg-secondary)',
+              color: activeTab === 'symptoms' ? 'var(--accent-primary)' : 'var(--text-secondary)',
+              cursor: 'pointer',
+              transition: 'all 0.2s'
+            }}>
+            Symptoms & Warning Signs
+          </button>
         </div>
 
         {/* Search Input */}
@@ -265,7 +309,7 @@ const Classification = () => {
           <Search size={20} color="var(--text-secondary)" style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)' }} />
           <input 
             type="text" 
-            placeholder={`Search for a ${activeTab === 'types' ? 'seizure type' : 'syndrome'}...`}
+            placeholder={`Search for a ${activeTab === 'types' ? 'seizure type' : activeTab === 'syndromes' ? 'syndrome' : 'symptom'}...`}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{ 
@@ -328,6 +372,38 @@ const Classification = () => {
             ) : (
               <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-secondary)' }}>
                 <p style={{ fontSize: '1.2rem' }}>No epilepsy syndromes found matching "{searchTerm}"</p>
+              </div>
+            )
+          )}
+
+          {activeTab === 'symptoms' && (
+            filteredSymptoms.length > 0 ? (
+              filteredSymptoms.map((item, index) => (
+                <div key={index} className="card" style={{ padding: '1.5rem 2rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
+                    <h3 style={{ fontSize: '1.4rem', color: 'var(--accent-primary)', margin: 0 }}>{item.name}</h3>
+                    {item.scientificName && (
+                      <span style={{ 
+                        display: 'inline-flex', 
+                        alignItems: 'center', 
+                        gap: '0.5rem', 
+                        background: '#f1f5f9', 
+                        padding: '0.4rem 1rem', 
+                        borderRadius: '50px', 
+                        fontSize: '0.9rem',
+                        color: '#64748b',
+                        border: '1px solid #cbd5e1'
+                      }}>
+                        <Stethoscope size={14} /> Medical Term: {item.scientificName}
+                      </span>
+                    )}
+                  </div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.6 }}>{item.description}</p>
+                </div>
+              ))
+            ) : (
+              <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-secondary)' }}>
+                <p style={{ fontSize: '1.2rem' }}>No symptoms found matching "{searchTerm}"</p>
               </div>
             )
           )}
