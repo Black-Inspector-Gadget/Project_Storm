@@ -61,7 +61,7 @@ const Home = () => {
       <section className="container" style={{ padding: '5rem 2rem', marginTop: '-4rem', position: 'relative', zIndex: 20 }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           
-          <Link to="/support" className="card" style={{ display: 'block', textDecoration: 'none', background: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255, 255, 255, 0.5)' }}>
+          <Link to="/getting-started/support-first-aid" className="card" style={{ display: 'block', textDecoration: 'none', background: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255, 255, 255, 0.5)' }}>
             <div style={{ width: '60px', height: '60px', borderRadius: '16px', background: '#fee2e2', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
               <ShieldAlert size={32} color="var(--danger)" />
             </div>
