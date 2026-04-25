@@ -125,7 +125,7 @@ const EducateYourself = () => {
 
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <a 
-          href="https://docs.google.com/presentation/d/1eDd9jjNN0uWbBArMG8rooO0EuEiQm0T7AWzuPTLnLPw/present?slide=id.g38ee5f3ba22_0_18" 
+          href="https://www.epilepsy.com/sites/default/files/atoms/files/Seizure-Description-Form-English-Spanish_0.pdf" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="btn btn-primary"
