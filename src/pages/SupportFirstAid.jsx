@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ShieldAlert, AlertTriangle, Clock, PhoneCall, HeartPulse } from 'lucide-react';
+import { ArrowLeft, ShieldAlert, AlertTriangle, Clock, PhoneCall, HeartPulse, FileText } from 'lucide-react';
 
 const SupportFirstAid = () => {
   return (
